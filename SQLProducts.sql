@@ -1,11 +1,11 @@
 CREATE TABLE Products (
-	id int PRIMARY KEY,
+	id int PRIMARY KEY IDENTITY(1,1),
 	name varchar(255) NOT NULL,
 	 
 );
 
 INSERT INTO Products
-VALUES  (1, 'Мясо'),
-	(2, 'Рыба'),
-	(3, 'Молоко'),
-        (4, 'Носок');
+VALUES  ( 'Мясо'),
+	( 'Рыба'),
+	( 'Перец'),
+    ( 'Носок');
