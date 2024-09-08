@@ -5,6 +5,6 @@ CREATE TABLE Category (
 );
 
 INSERT INTO Category 
-VALUES  (1, 'Мясо'),
-        (2, 'Рыба'),
-		(3, 'Овощи');
+VALUES  (1, 'РњСЏСЃРѕ'),
+        (2, 'Р С‹Р±Р°'),
+		(3, 'РћРІРѕС‰Рё');
