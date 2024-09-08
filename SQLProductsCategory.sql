@@ -10,4 +10,4 @@ CREATE TABLE [dbo].[CategoryProducts](
         REFERENCES Category(id)
 )
 
-insert into [CategoryProducts] values (2,2),(3,3)
+insert into [CategoryProducts] values (1,1),(2,2),(3,3)
