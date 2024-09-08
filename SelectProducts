@@ -1,5 +1,0 @@
-SELECT TOP (100) PERCENT prod.name AS [Имя продукта], cat.name AS [Имя категории]
-FROM     dbo.Products AS prod LEFT OUTER JOIN
-                  dbo.ProductsCategory AS prodcat ON prod.id = prodcat.products_id INNER JOIN
-                  dbo.Category AS cat ON cat.id = prodcat.category_id
-ORDER BY [Имя продукта]
