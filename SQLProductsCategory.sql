@@ -1,19 +1,13 @@
 CREATE TABLE [dbo].[CategoryProducts](
-	[product_id] [int] NULL,
-	[categoty_id] [int] NULL
-) ON [PRIMARY]
-GO
+		id INT PRIMARY KEY IDENTITY(1,1), 
+	
+		[product_id] int  NOT NUll,
+		[categoty_id] int  NOT NUll,
 
-ALTER TABLE [dbo].[CategoryProducts]  WITH CHECK ADD  CONSTRAINT [FK_CategoryProducts_Category] FOREIGN KEY([categoty_id])
-REFERENCES [dbo].[Category] ([id])
-GO
+		CONSTRAINT FK_CategoryProducts_Products FOREIGN KEY ([product_id])
+        REFERENCES Products(id),
+		CONSTRAINT FK_CategoryProducts_Category FOREIGN KEY ([categoty_id])
+        REFERENCES Category(id)
+)
 
-ALTER TABLE [dbo].[CategoryProducts] CHECK CONSTRAINT [FK_CategoryProducts_Category]
-GO
-
-ALTER TABLE [dbo].[CategoryProducts]  WITH CHECK ADD  CONSTRAINT [FK_CategoryProducts_Product] FOREIGN KEY([product_id])
-REFERENCES [dbo].[Product] ([id])
-GO
-
-ALTER TABLE [dbo].[CategoryProducts] CHECK CONSTRAINT [FK_CategoryProducts_Product]
-GO
+insert into [CategoryProducts] values (2,2),(3,3)
